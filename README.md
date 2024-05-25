@@ -13,10 +13,10 @@ Windows only.
 
 ## Running
 
-- Run `generate-ps-save-icons.py` as administrator.
-- Run `python generate-ps-save-icons.py` in the terminal, as administrator.
+- Run `generate-ps-save-icons.py`.
+- Run `python generate-ps-save-icons.py` in the terminal.
 
-(Administrator rights are required to be able to write the `desktop.ini` files).
+(Administrator rights may be required to be able to write the `desktop.ini` files).
 
 ## Notes
 
