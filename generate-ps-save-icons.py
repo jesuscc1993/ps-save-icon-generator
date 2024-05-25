@@ -52,7 +52,7 @@ def set_folder_icon(folder_path):
 
         with open(desktop_ini_path, "w") as desktop_ini:
             desktop_ini.write("[.ShellClassInfo]\n")
-            desktop_ini.write(f"IconResource={icon_path},0\n")
+            desktop_ini.write(f"IconResource={ICON_FILENAME},0\n")
 
         os.system(f'attrib +h +s "{desktop_ini_path}"')
         os.system(f'attrib +h "{icon_path}"')
