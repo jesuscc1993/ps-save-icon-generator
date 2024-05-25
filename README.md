@@ -22,4 +22,4 @@ Windows only.
 
 The OS will only load up the icons when it feels like it; it usually seems to be at random.  
 There are some workarounds but they only sometimes work.  
-Often the best solution is to sign out or restart the computer.
+Often the best bet is to sign out or restart the computer, but even this is unreliable.
