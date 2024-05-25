@@ -16,8 +16,6 @@ Windows only.
 - Run `generate-ps-save-icons.py`.
 - Run `python generate-ps-save-icons.py` in the terminal.
 
-(Administrator rights may be required to be able to write the `desktop.ini` files).
-
 ## Notes
 
 The OS will only load up the icons when it feels like it; it usually seems to be at random.  
