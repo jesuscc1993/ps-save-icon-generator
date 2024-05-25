@@ -2,8 +2,8 @@
 
 ## Description
 
-Python script that generates folder icons for each save folder.
-Compatible only with PSP and PS3, as those are the only save types that included an unpacked image alongside saves.
+Python script that generates folder icons for each save folder.  
+Compatible only with PSP and PS3, as those are the only save types that included an unpacked image alongside saves.  
 Windows only.
 
 ## Requirements
