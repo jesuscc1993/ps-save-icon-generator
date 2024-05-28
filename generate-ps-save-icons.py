@@ -3,7 +3,7 @@ from PIL import Image
 
 ICON_FILENAME = "icon.ico"
 DESKTOP_INI_FILENAME = "desktop.ini"
-PNG_FILENAME = "ICON0.PNG"
+IMAGE_FILENAME = "ICON0.PNG"
 
 def main():
     parent_folder = input("Please enter the path to the folder containing your PSP/PS3 save folders: ")
@@ -16,13 +16,13 @@ def main():
         item_path = os.path.join(parent_folder, item)
         
         if os.path.isdir(item_path):
-            png_path = os.path.join(item_path, PNG_FILENAME)
+            png_path = os.path.join(item_path, IMAGE_FILENAME)
             if os.path.exists(png_path):
                 ico_path = os.path.join(item_path, ICON_FILENAME)
                 png_to_ico(png_path, ico_path)
                 set_folder_icon(item_path)
             else:
-                print(f"No {PNG_FILENAME} found in {item_path}")
+                print(f"No {IMAGE_FILENAME} found in {item_path}")
 
     print(f"Finished generating icons.")
 
