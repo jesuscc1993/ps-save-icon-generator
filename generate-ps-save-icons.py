@@ -16,22 +16,22 @@ def main():
         item_path = os.path.join(parent_folder, item)
         
         if os.path.isdir(item_path):
-            png_path = os.path.join(item_path, IMAGE_FILENAME)
-            if os.path.exists(png_path):
+            image_path = os.path.join(item_path, IMAGE_FILENAME)
+            if os.path.exists(image_path):
                 ico_path = os.path.join(item_path, ICON_FILENAME)
-                png_to_ico(png_path, ico_path)
+                png_to_ico(image_path, ico_path)
                 set_folder_icon(item_path)
             else:
                 print(f"No {IMAGE_FILENAME} found in {item_path}")
 
     print(f"Finished generating icons.")
 
-def png_to_ico(png_path, ico_path):
+def png_to_ico(image_path, ico_path):
     try:
         if os.path.exists(ico_path):
             os.unlink(ico_path)
 
-        with Image.open(png_path) as img:
+        with Image.open(image_path) as img:
             if img.width < 256:
                 img = img.resize((256, int(256 * img.height / img.width)), resample=Image.LANCZOS)
             img.thumbnail((256, 256), Image.LANCZOS)
@@ -40,7 +40,7 @@ def png_to_ico(png_path, ico_path):
             background.paste(img, offset)
             background.save(ico_path, format='ICO', sizes=[(256, 256)])
     except Exception as e:
-        print(f"Error converting {png_path} to ICO: {e}")
+        print(f"Error converting {image_path} to ICO: {e}")
 
 def set_folder_icon(folder_path):
     try:
